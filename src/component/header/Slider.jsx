@@ -35,7 +35,7 @@ export default function App() {
                                 <p className="mb-5 font-semibold">
                                     A Book Shelf breathes wisdom, whispers dreams, and awakens souls — every page a doorway, every book a universe waiting to unfold
                                 </p>
-                                <button className="btn btn-primary">Get Started</button>
+
                             </div>
                         </div>
                     </div>
