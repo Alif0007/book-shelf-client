@@ -2,6 +2,7 @@
 import { use, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddBook = () => {
     const { user } = use(AuthContext)
@@ -27,19 +28,26 @@ const AddBook = () => {
         console.log("📘 New Book Added:", formData);
 
 
-        fetch("http://localhost:3000/books", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
+        // fetch("http://localhost:3000/books", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(formData),
+        // });
 
-        // axios.post("http://localhost:3000/books", formData)
-        //     .then(data => {
-        //         console.log(data)
-        //     })
+        axios.post("http://localhost:3000/books", formData)
+            .then(data => {
+                console.log(data)
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Book Added",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
 
 
-        alert("✅ Book added successfully!");
+
         setFormData({
             title: "",
             author: "",

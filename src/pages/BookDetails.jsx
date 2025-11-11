@@ -1,9 +1,8 @@
-import axios from "axios";
-import React, { useEffect } from "react";
+
 import { FaStar, FaUser, FaEnvelope, FaBookOpen, FaTag } from "react-icons/fa";
 import { useLoaderData } from "react-router";
 
-const BookDetails = ({ books }) => {
+const BookDetails = () => {
 
 
     const book = useLoaderData()
