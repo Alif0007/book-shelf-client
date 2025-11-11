@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from '../component/header/Slider'
 import TopRatedBooks from '../component/TopRatedBooks';
 import axios from 'axios';
-import { useLoaderData } from 'react-router';
+
 import TopGenres from '../component/TopGenres';
 import BestBookBanner from './BestBookBaner';
 import AboutBookShelf from './AboutBookShelf';
@@ -13,18 +13,20 @@ import AboutBookShelf from './AboutBookShelf';
 
 
 const Home = () => {
-    // const [ratedBooks, setRatedBooks] = useState([])
-    const topBooks = useLoaderData()
-    console.log(topBooks)
-    // useEffect(() => {
-    //     axios.get('http://localhost:3000/topbooks')
-    //         .then(topBooks => {
-    //             setRatedBooks([topBooks.data])
-    //             console.log(ratedBooks, topBooks.data)
+    const [ratedBooks, setRatedBooks] = useState([])
+    // const topBooks = useLoaderData()
+    // console.log(topBooks)
 
-    //         })
-    // }, [])
 
+    useEffect(() => {
+        axios.get('http://localhost:3000/topbooks')
+            .then(topBooks => {
+                setRatedBooks(topBooks.data)
+                console.log(topBooks)
+
+            })
+    }, [])
+    console.log(ratedBooks)
     return (
         <div>
             <Slider></Slider>
@@ -33,7 +35,7 @@ const Home = () => {
 
             <div className='grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 max-w-14/15 mx-auto mt-5'>
                 {
-                    topBooks.map((topBook) => <TopRatedBooks key={topBook._id} topBook={topBook} ></TopRatedBooks>)
+                    ratedBooks.map((topBook) => <TopRatedBooks key={topBook._id} topBook={topBook} ></TopRatedBooks>)
                 }
             </div>
 

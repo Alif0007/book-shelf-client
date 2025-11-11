@@ -4,6 +4,7 @@ import logo from '../../assets/book-shelf_8766963.png'
 import { AuthContext } from '../../authProvider/AuthProvider';
 import { use } from 'react';
 import toast from 'react-hot-toast';
+import { Tooltip } from 'react-tooltip';
 
 
 const Navbar = () => {
@@ -57,11 +58,14 @@ const Navbar = () => {
                         user ? <div className='flex items-center gap-4'>
                             <div className='flex flex-col items-center'>
                                 <img
+                                    data-tooltip-id="bookTooltip"
+                                    data-tooltip-content={user.displayName}
                                     src={user.photoURL ? user.photoURL : "https://sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png"}
                                     alt="Profile"
                                     className="w-10 h-10 rounded-full  border border-orange-300 shadow-md "
                                 />
-                                <p>{user.displayName}</p>
+
+                                <Tooltip id="bookTooltip" place="left" effect="solid" />
                             </div>
                             <Link to="/login"><div onClick={handleSignOut} className="btn bg-red-600 text-white">Log Out</div> </Link>
                         </div> :
