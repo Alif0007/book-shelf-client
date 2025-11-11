@@ -1,14 +1,31 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router';
 import logo from '../../assets/book-shelf_8766963.png'
+import { AuthContext } from '../../authProvider/AuthProvider';
+import { use } from 'react';
+import toast from 'react-hot-toast';
 
 
 const Navbar = () => {
+
+    const { user, signOutUser, setUser } = use(AuthContext)
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+
+                toast.success('Logged Out Succesfully')
+                setUser(null)
+            }).catch((error) => {
+                console.log(error)
+            });
+    }
+
     const links = <>
-        <NavLink to="/"><li className='mx-2 text-lg'>Home</li></NavLink>
-        <NavLink to="/allbooks"><li className='mr-2 text-lg'>All Books</li></NavLink>
-        <NavLink to="/addbook"><li className='mx-2 text-lg'>Add Book</li></NavLink>
-        <NavLink to="/mybooks"><li className='mx-2 text-lg'>My Books</li></NavLink>
+        <NavLink to="/"><li className=' text-lg'>Home</li></NavLink>
+        <NavLink to="/allbooks"><li className=' text-lg'>All Books</li></NavLink>
+        <NavLink to="/addbook"><li className=' text-lg'>Add Book</li></NavLink>
+        <NavLink to="/mybooks"><li className=' text-lg'>My Books</li></NavLink>
     </>
 
 
@@ -22,7 +39,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-4 shadow">
                             {links}
                         </ul>
                     </div>
@@ -31,12 +48,25 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 gap-4">
                         {links}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">ss</a>
+                    {
+                        user ? <div className='flex items-center gap-4'>
+                            <div className='flex flex-col items-center'>
+                                <img
+                                    src={user.photoURL ? user.photoURL : "https://sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png"}
+                                    alt="Profile"
+                                    className="w-10 h-10 rounded-full  border border-orange-300 shadow-md "
+                                />
+                                <p>{user.displayName}</p>
+                            </div>
+                            <Link to="/login"><div onClick={handleSignOut} className="btn bg-red-600 text-white">Log Out</div> </Link>
+                        </div> :
+                            <Link to="/login"><div className="btn bg-blue-600 text-white">Login</div> </Link>
+                    }
                 </div>
             </div>
         </div>

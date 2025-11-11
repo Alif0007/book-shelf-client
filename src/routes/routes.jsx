@@ -2,8 +2,11 @@ import { createBrowserRouter } from "react-router";
 import Root from "../root/Root";
 import home from '../pages/home'
 import allBooks from "../pages/allBooks";
-import addBook from "../pages/addBook";
+import AddBook from "../pages/addBook";
 import myBooks from "../pages/myBooks";
+import LoginPage from "../pages/loginPage";
+import RegisterPage from "../pages/registerPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter(
@@ -24,7 +27,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/addbook',
-                    Component: addBook
+                    element: <PrivateRoute><AddBook></AddBook></PrivateRoute>
                 },
                 {
                     path: '/mybooks',
@@ -32,11 +35,11 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/login',
-                    Component: myBooks
+                    Component: LoginPage
                 },
                 {
                     path: '/register',
-                    Component: myBooks
+                    Component: RegisterPage
                 },
 
 
