@@ -3,7 +3,7 @@ import Root from "../root/Root";
 import home from '../pages/home'
 import allBooks from "../pages/allBooks";
 import AddBook from "../pages/addBook";
-import myBooks from "../pages/myBooks";
+import MyBooks from "../pages/myBooks";
 import LoginPage from "../pages/loginPage";
 import RegisterPage from "../pages/registerPage";
 import PrivateRoute from "./PrivateRoute";
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/mybooks',
-                    Component: myBooks
+                    element: <PrivateRoute><MyBooks></MyBooks></PrivateRoute>
                 },
                 {
                     path: '/login',
