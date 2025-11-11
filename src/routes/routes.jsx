@@ -7,6 +7,7 @@ import MyBooks from "../pages/myBooks";
 import LoginPage from "../pages/loginPage";
 import RegisterPage from "../pages/registerPage";
 import PrivateRoute from "./PrivateRoute";
+import BookDetails from "../pages/BookDetails";
 
 
 const router = createBrowserRouter(
@@ -32,6 +33,11 @@ const router = createBrowserRouter(
                 {
                     path: '/mybooks',
                     element: <PrivateRoute><MyBooks></MyBooks></PrivateRoute>
+                },
+                {
+                    path: '/bookdetails/:id',
+                    element: <PrivateRoute><BookDetails></BookDetails></PrivateRoute>,
+                    loader: ({ params }) => fetch(`http://localhost:3000/books/${params.id}`)
                 },
                 {
                     path: '/login',

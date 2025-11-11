@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa6';
+import { Link } from 'react-router';
 
 const AllBooks = () => {
 
@@ -68,7 +69,7 @@ const AllBooks = () => {
                                         <br />
 
                                     </td>
-                                    <td className='flex gap-2 items-center'>{book.rating}
+                                    <td className='flex gap-2 items-center justify-center'>{book.rating}
                                         <div className='text-yellow-400'>
                                             <FaStar />
                                         </div>
@@ -77,7 +78,7 @@ const AllBooks = () => {
                                         {book.userEmail}
                                     </td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">details</button>
+                                        <Link to={`/bookdetails/${book._id}`} ><button className="btn btn-ghost btn-xs">details</button></Link>
                                     </th>
                                 </tr>
 
