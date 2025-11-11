@@ -44,15 +44,15 @@
     "coverImage": "https://i.ibb.co/XYZ123/book-cover-5.jpg",
     "userEmail": "adventurer5@example.com"
   },
-  {
-    "title": "The Puzzle of the Lost Heirloom",
-    "author": "Benjamin Clarke",
-    "genre": "Mystery",
-    "rating": 3.9,
-    "summary": "A delicate heirloom goes missing during a grand estate ball. Sarah, the young librarian, must decode cryptic clues and navigate society’s secrets to solve the case.",
-    "coverImage": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cover-book-crown-design-template-01522d547cb082f76d5437bf6c6d3f4b_screen.jpg?ts=1721685688",
-    "userEmail": "mysteryfan6@example.com"
-  },
+    {
+        "title": "The Puzzle of the Lost Heirloom",
+        "author": "Benjamin Clarke",
+        "genre": "Mystery",
+        "rating": 3.9,
+        "summary": "A delicate heirloom goes missing during a grand estate ball. Sarah, the young librarian, must decode cryptic clues and navigate society’s secrets to solve the case.",
+        "coverImage": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cover-book-crown-design-template-01522d547cb082f76d5437bf6c6d3f4b_screen.jpg?ts=1721685688",
+        "userEmail": "mysteryfan6@example.com"
+    },
   {
     "title": "Echoes from the Quiet Lake",
     "author": "Mia Harper",

@@ -30,6 +30,15 @@ const router = createBrowserRouter(
                     path: '/mybooks',
                     Component: myBooks
                 },
+                {
+                    path: '/login',
+                    Component: myBooks
+                },
+                {
+                    path: '/register',
+                    Component: myBooks
+                },
+
 
 
             ]
