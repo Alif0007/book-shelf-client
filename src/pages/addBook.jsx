@@ -20,7 +20,7 @@ const AddBook = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData({ ...formData, [name]: name === "rating" ? Number(value) : value });
     };
 
     const handleSubmit = (e) => {

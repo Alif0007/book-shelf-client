@@ -75,7 +75,7 @@ export default function App() {
                                 <p className="mb-5 font-semibold">
                                     Share the joy of reading by adding a new book to our collection — every story you add inspires countless journeys ahead.
                                 </p>
-                                <Link to='/allbooks'><button className="btn btn-primary">Add a Book</button></Link>
+                                <Link to='/addbook'><button className="btn btn-primary">Add a Book</button></Link>
                             </div>
                         </div>
                     </div>
