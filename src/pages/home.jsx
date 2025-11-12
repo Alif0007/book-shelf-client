@@ -33,7 +33,7 @@ const Home = () => {
 
             <h1 className=' text-3xl font-bold text-center text-gray-800 my-8'>Top Rated Books</h1>
 
-            <div className='grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 max-w-14/15 mx-auto mt-5'>
+            <div className='grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 max-w-14/15 mx-auto mt-5'>
                 {
                     ratedBooks.map((topBook) => <TopRatedBooks key={topBook._id} topBook={topBook} ></TopRatedBooks>)
                 }

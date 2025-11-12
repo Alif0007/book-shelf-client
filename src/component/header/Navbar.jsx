@@ -25,9 +25,18 @@ const Navbar = () => {
     const links = <>
         <NavLink to="/"><li className=' text-lg'>Home</li></NavLink>
         <NavLink to="/allbooks"><li className=' text-lg'>All Books</li></NavLink>
-        <NavLink to="/addbook"><li className=' text-lg'>Add Book</li></NavLink>
-        <NavLink to="/mybooks"><li className=' text-lg'>My Books</li></NavLink>
+        {
+            user &&
+            <div className='flex gap-3'>
+                <NavLink to="/addbook"><li className=' text-lg'>Add Book</li></NavLink>
+
+                <NavLink to="/mybooks"><li className=' text-lg'>My Books</li></NavLink>
+            </div>
+
+
+        }
     </>
+
 
 
     return (

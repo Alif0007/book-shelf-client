@@ -4,7 +4,7 @@ import { GiRoundStar } from 'react-icons/gi';
 const TopRatedBooks = ({ topBook }) => {
     return (
         <div>
-            <div className="w-56 bg-white shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden h-full">
+            <div className="w-full bg-white shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden h-full">
                 {/* Book Cover */}
                 <div className="bg-gray-100">
                     <img

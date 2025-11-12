@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'animate.css';
 
 
 
@@ -31,7 +32,7 @@ export default function App() {
                         <div className="hero-overlay"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-xl">
-                                <h1 className="mb-5 text-5xl font-bold">Welcome to Book Shelf</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__tada">Welcome to Book Shelf</h1>
                                 <p className="mb-5 font-semibold">
                                     A Book Shelf breathes wisdom, whispers dreams, and awakens souls — every page a doorway, every book a universe waiting to unfold
                                 </p>
