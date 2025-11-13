@@ -1,31 +1,59 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FaSortAmountDown, FaSortAmountUp } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router';
 
 const AllBooks = () => {
 
     const [allBooks, setAllBooks] = useState([])
+    const [sortOrder, setSortOrder] = useState(-1)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/books')
-            .then(books => {
-                setAllBooks(books.data)
-
-
+        axios.get(`http://localhost:3000/books`)
+            .then((res) => {
+                const sorted = [...res.data].sort((a, b) =>
+                    sortOrder === 1 ? a.rating - b.rating : b.rating - a.rating
+                );
+                setAllBooks(sorted);
             })
-    }, [])
+            .catch((err) => console.error(err));
+    }, [sortOrder])
 
+    const handleSort = (order) => {
+        setSortOrder(order)
+        console.log(order)
+    }
 
 
     return (
         <div className='max-w-7xl mx-auto'>
             <h1 className=' text-3xl font-bold text-center text-gray-800 mt-5'>All The Books</h1>
             <div className="dropdown flex justify-end mb-10">
-                <div tabIndex={0} role="button" className="btn m-1">Click</div>
+                <div tabIndex={0} role="button" className="btn m-1">
+
+                    {sortOrder === 1 ? (
+                        <>
+                            <FaSortAmountUp className="mr-2" /> Sort by Rating (Low → High)
+                        </>
+                    ) : (
+                        <>
+                            <FaSortAmountDown className="mr-2" /> Sort by Rating (High → Low)
+                        </>
+                    )}
+
+                </div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
+                    <li>
+                        <button onClick={() => handleSort(1)}>
+                            <FaSortAmountUp className="mr-2" /> Low → High
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => handleSort(-1)}>
+                            <FaSortAmountDown className="mr-2" /> High → Low
+                        </button>
+                    </li>
                 </ul>
             </div>
 
@@ -76,7 +104,7 @@ const AllBooks = () => {
                                         <br />
 
                                     </td>
-                                    <td className='flex gap-2 items-center justify-center'>{book.rating}
+                                    <td className='flex gap-2 items-center justify-center mt-3'>{book.rating}
                                         <div className='text-yellow-400'>
                                             <FaStar />
                                         </div>

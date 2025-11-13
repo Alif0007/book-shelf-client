@@ -27,11 +27,11 @@ const Navbar = () => {
         <NavLink to="/allbooks"><li className=' text-lg'>All Books</li></NavLink>
         {
             user &&
-            <div className='flex gap-3'>
+            <>
                 <NavLink to="/addbook"><li className=' text-lg'>Add Book</li></NavLink>
 
                 <NavLink to="/mybooks"><li className=' text-lg'>My Books</li></NavLink>
-            </div>
+            </>
 
 
         }
@@ -62,17 +62,59 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
+
                 <div className="navbar-end">
+
                     {
-                        user ? <div className='flex items-center gap-4'>
+                        user ? <div className='flex items-center gap-4 ml-5'>
                             <div className='flex flex-col items-center'>
-                                <img
-                                    data-tooltip-id="bookTooltip"
-                                    data-tooltip-content={user.displayName}
-                                    src={user.photoURL ? user.photoURL : "https://sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png"}
-                                    alt="Profile"
-                                    className="w-10 h-10 rounded-full  border border-orange-300 shadow-md "
-                                />
+
+                                <div className="dropdown dropdown-center">
+                                    <div tabIndex={0} role="button" className="cursor-pointer m-1">
+
+                                        <img
+                                            data-tooltip-id="bookTooltip"
+                                            data-tooltip-content={user.displayName}
+                                            src={user.photoURL ? user.photoURL : "https://sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png"}
+                                            alt="Profile"
+                                            className="w-10 h-10 rounded-full  border border-orange-300 shadow-md "
+                                        />
+                                    </div>
+                                    <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                        <li className='ml-5 font-semibold'>{user.displayName}</li>
+                                        <li><label className="flex cursor-pointer gap-2">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round">
+                                                <circle cx="12" cy="12" r="5" />
+                                                <path
+                                                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                                            </svg>
+                                            <input type="checkbox" value="synthwave" className="toggle theme-controller" />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round">
+                                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                            </svg>
+                                        </label></li>
+
+                                    </ul>
+                                </div>
+
 
                                 <Tooltip id="bookTooltip" place="left" effect="solid" />
                             </div>

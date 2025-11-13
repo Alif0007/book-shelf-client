@@ -9,6 +9,7 @@ import RegisterPage from "../pages/registerPage";
 import PrivateRoute from "./PrivateRoute";
 import BookDetails from "../pages/BookDetails";
 import UpdateBookPage from "../pages/UpdateBookPage"
+import ErrorPage from "../pages/error404";
 
 
 const router = createBrowserRouter(
@@ -53,6 +54,10 @@ const router = createBrowserRouter(
                     path: '/register',
                     Component: RegisterPage
                 },
+                {
+                    path: "/*",
+                    element: <ErrorPage></ErrorPage>
+                }
 
 
 

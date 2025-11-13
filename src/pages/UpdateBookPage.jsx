@@ -181,7 +181,7 @@ const AddBook = () => {
                 {/* Submit Button */}
                 <div className="text-center pt-6">
                     <button type="submit" className="btn btn-primary w-full">
-                        Add Book
+                        Update
                     </button>
                 </div>
             </form>
