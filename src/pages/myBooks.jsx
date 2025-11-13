@@ -1,10 +1,10 @@
-import React, { use, useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { AuthContext } from '../authProvider/AuthProvider';
 import axios from 'axios';
 import { FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
-import { MdDelete, MdDeleteForever } from 'react-icons/md';
+import { MdDeleteForever } from 'react-icons/md';
 import { HiAdjustmentsHorizontal } from 'react-icons/hi2';
 
 const MyBooks = () => {
