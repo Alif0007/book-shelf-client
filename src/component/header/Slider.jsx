@@ -29,7 +29,7 @@ export default function App() {
                                 "url(https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/GettyImages-900301626_437925_t2i3bm.jpg)",
                         }}
                     >
-                        <div className="hero-overlay"></div>
+                        <div className="hero-overlay z-0"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-xl">
                                 <h1 className="mb-5 text-5xl font-bold animate__animated animate__tada">Welcome to Book Shelf</h1>
@@ -49,7 +49,7 @@ export default function App() {
                                 "url(https://images.stockcake.com/public/3/8/6/386d51ef-a21b-4efd-a7f3-1f761d294dfd/library-book-arch-stockcake.jpg)",
                         }}
                     >
-                        <div className="hero-overlay"></div>
+                        <div className="hero-overlay z-0"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-xl">
                                 <h1 className="mb-5 text-5xl font-bold">Explore the World of Words</h1>
@@ -69,7 +69,7 @@ export default function App() {
                                 "url(https://www.nli.ie/sites/default/files/styles/image_with_caption_narrow/public/2022-10/nli-oct-screen-res-56.webp?h=78aab1d8&itok=qDrjbLV4)",
                         }}
                     >
-                        <div className="hero-overlay"></div>
+                        <div className="hero-overlay z-0"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-xl">
                                 <h1 className="mb-5 text-5xl font-bold">Add a New Chapter</h1>
