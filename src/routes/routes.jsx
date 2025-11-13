@@ -22,7 +22,7 @@ const router = createBrowserRouter(
                 {
                     path: '/',
                     Component: home,
-                    loader: () => fetch("http://localhost:3000/topbooks")
+                    loader: () => fetch("https://book-shelf-server-eight.vercel.app/topbooks")
                 },
                 {
                     path: '/allBooks',
@@ -39,12 +39,12 @@ const router = createBrowserRouter(
                 {
                     path: '/bookdetails/:id',
                     element: <PrivateRoute><BookDetails></BookDetails></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:3000/books/${params.id}`)
+                    loader: ({ params }) => fetch(`https://book-shelf-server-eight.vercel.app/books/${params.id}`)
                 },
                 {
                     path: '/update-book/:id',
                     element: <PrivateRoute><UpdateBookPage></UpdateBookPage>  </PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:3000/books/${params.id}`)
+                    loader: ({ params }) => fetch(`https://book-shelf-server-eight.vercel.app/books/${params.id}`)
                 },
                 {
                     path: '/login',

@@ -10,7 +10,7 @@ const AllBooks = () => {
     const [sortOrder, setSortOrder] = useState(-1)
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/books`)
+        axios.get(`https://book-shelf-server-eight.vercel.app/books`)
             .then((res) => {
                 const sorted = [...res.data].sort((a, b) =>
                     sortOrder === 1 ? a.rating - b.rating : b.rating - a.rating

@@ -13,7 +13,7 @@ const MyBooks = () => {
 
     useEffect(() => {
         if (user?.email) {
-            axios.get(`http://localhost:3000/mybooks?email=${user.email}`)
+            axios.get(`https://book-shelf-server-eight.vercel.app/mybooks?email=${user.email}`)
                 .then(data => {
                     setBooks(data.data)
                 })
@@ -33,7 +33,7 @@ const MyBooks = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:3000/books/${id}`)
+                axios.delete(`https://book-shelf-server-eight.vercel.app/books/${id}`)
                     .then(data => {
                         if (data.data.deletedCount) {
                             Swal.fire({

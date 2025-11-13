@@ -28,13 +28,13 @@ const AddBook = () => {
         console.log("📘 New Book Added:", formData);
 
 
-        // fetch("http://localhost:3000/books", {
+        // fetch("https://book-shelf-server-eight.vercel.app/books", {
         //     method: "POST",
         //     headers: { "Content-Type": "application/json" },
         //     body: JSON.stringify(formData),
         // });
 
-        axios.post("http://localhost:3000/books", formData)
+        axios.post("https://book-shelf-server-eight.vercel.app/books", formData)
             .then(data => {
                 console.log(data)
                 Swal.fire({

@@ -19,7 +19,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3000/topbooks')
+        axios.get('https://book-shelf-server-eight.vercel.app/topbooks')
             .then(topBooks => {
                 setRatedBooks(topBooks.data)
                 console.log(topBooks)

@@ -19,7 +19,7 @@ const AddBook = () => {
     });
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/books/${id}`)
+        axios.get(`https://book-shelf-server-eight.vercel.app/books/${id}`)
             .then(data => {
 
                 setBook(data.data)
@@ -54,7 +54,7 @@ const AddBook = () => {
 
 
 
-        axios.patch(`http://localhost:3000/books/${book._id}`, formData)
+        axios.patch(`https://book-shelf-server-eight.vercel.app/books/${book._id}`, formData)
             .then(data => {
                 console.log(data)
                 Swal.fire({
