@@ -73,10 +73,16 @@ const LoginPage = () => {
             <div className="hero bg-base-200 min-h-screen">
 
 
+
                 <div className="hero-content flex-col lg:flex-row-reverse w-full">
 
                     <form onSubmit={handleLogin} className="card bg-base-100  w-full max-w-md shadow-2xl">
+
                         <h1 className='text-3xl text-center py-4'> Login</h1>
+                        <div className='text-center'>
+                            <p>Email : user@gmail.com</p>
+                            <p>Password : User1234</p>
+                        </div>
                         <div className="card-body">
                             <fieldset className="fieldset">
                                 <label className="label ">Email</label>

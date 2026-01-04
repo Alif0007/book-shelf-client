@@ -10,6 +10,8 @@ import PrivateRoute from "./PrivateRoute";
 import BookDetails from "../pages/BookDetails";
 import UpdateBookPage from "../pages/UpdateBookPage"
 import ErrorPage from "../pages/error404";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 
 
 const router = createBrowserRouter(
@@ -38,7 +40,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/bookdetails/:id',
-                    element: <PrivateRoute><BookDetails></BookDetails></PrivateRoute>,
+                    element: <BookDetails></BookDetails>,
                     loader: ({ params }) => fetch(`https://book-shelf-server-eight.vercel.app/books/${params.id}`)
                 },
                 {
@@ -53,6 +55,14 @@ const router = createBrowserRouter(
                 {
                     path: '/register',
                     Component: RegisterPage
+                },
+                {
+                    path: '/about',
+                    Component: About
+                },
+                {
+                    path: '/contact',
+                    Component: Contact
                 },
                 {
                     path: "/*",

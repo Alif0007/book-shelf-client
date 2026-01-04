@@ -7,6 +7,7 @@ import axios from 'axios';
 import TopGenres from '../component/TopGenres';
 import BestBookBanner from './BestBookBaner';
 import AboutBookShelf from './AboutBookShelf';
+import Faq from '../component/Faq';
 
 
 
@@ -47,7 +48,7 @@ const Home = () => {
 
             <AboutBookShelf></AboutBookShelf>
 
-
+            <Faq></Faq>
 
 
         </div>

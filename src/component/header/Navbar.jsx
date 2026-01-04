@@ -23,25 +23,27 @@ const Navbar = () => {
     }
 
     const links = <>
-        <NavLink to="/"><li className=' text-lg'>Home</li></NavLink>
-        <NavLink to="/allbooks"><li className=' text-lg'>All Books</li></NavLink>
+        <NavLink to="/"><li className=' hover:bg-gray-100 p-1 rounded text-sm'>Home</li></NavLink>
+        <NavLink to="/allbooks"><li className='hover:bg-gray-100 p-1 rounded text-sm'>All Books</li></NavLink>
         {
             user &&
             <>
-                <NavLink to="/addbook"><li className=' text-lg'>Add Book</li></NavLink>
+                <NavLink to="/addbook"><li className='hover:bg-gray-100 p-1 rounded text-sm'>Add Book</li></NavLink>
 
-                <NavLink to="/mybooks"><li className=' text-lg'>My Books</li></NavLink>
+                <NavLink to="/mybooks"><li className='hover:bg-gray-100 p-1 rounded text-sm'>My Books</li></NavLink>
             </>
 
 
         }
+        <NavLink to="/about"><li className='hover:bg-gray-100 p-1 rounded text-sm'>About</li></NavLink>
+        <NavLink to="/contact"><li className='hover:bg-gray-100 p-1 rounded text-sm'>Contact</li></NavLink>
     </>
 
 
 
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm z-10">
+            <div className="navbar bg-base-100 fixed top-0  shadow-sm z-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
