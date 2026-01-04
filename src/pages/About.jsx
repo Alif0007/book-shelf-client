@@ -56,7 +56,7 @@ const About = () => {
                             <p className="text-lg text-base-content/80 leading-relaxed">
                                 Whether you're browsing top-rated books, adding your favorites, or managing your collection, Book Shelf is designed to grow with the community of readers worldwide.
                             </p>
-                            <Link to="/all-books" className="btn btn-primary mt-8">Explore Books Now</Link>
+                            <Link to="/allbooks" className="btn btn-primary mt-8">Explore Books Now</Link>
                         </div>
                     </div>
                 </div>
