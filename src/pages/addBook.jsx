@@ -202,7 +202,7 @@ const AddBook = () => {
 
                 {/* Submit Button */}
                 <div className="text-center pt-6">
-                    <button type="submit" className="btn btn-primary w-full">
+                    <button type="submit" className="btn btn-primary w-full hover:bg-primary-focus transition-all duration-300 transform hover:scale-105">
                         Add Book
                     </button>
                 </div>

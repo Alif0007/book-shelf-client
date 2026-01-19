@@ -63,7 +63,7 @@ const BookDetails = () => {
                     <span>Added by: {book.userEmail}</span>
                 </div>
 
-                <button className="btn btn-primary w-full md:w-auto mt-4">
+                <button className="btn btn-primary w-full md:w-auto mt-4 hover:bg-primary-focus transition-all duration-300 transform hover:scale-105">
                     Add to Reading List
                 </button>
             </div>

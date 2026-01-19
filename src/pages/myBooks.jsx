@@ -112,9 +112,9 @@ const MyBooks = () => {
                                         {book.userEmail}
                                     </td>
                                     <th>
-                                        <button onClick={() => handleDelete(book._id)} className="btn  btn-ghost btn-xs text-xl"><MdDeleteForever />
+                                        <button onClick={() => handleDelete(book._id)} className="btn btn-error btn-outline btn-xs text-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-110"><MdDeleteForever />
                                         </button>
-                                        <Link to={`/update-book/${book._id}`}><button className="btn btn-ghost btn-xs text-xl"><HiAdjustmentsHorizontal />
+                                        <Link to={`/update-book/${book._id}`}><button className="btn btn-primary btn-outline btn-xs text-xl hover:bg-primary-focus transition-all duration-300 transform hover:scale-110"><HiAdjustmentsHorizontal />
                                         </button></Link>
                                     </th>
                                 </tr>

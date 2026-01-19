@@ -1,50 +1,90 @@
 import React from 'react';
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import logo from '../../assets/book-shelf_8766963.png'
 
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
-                <aside>
-                    <img className='h-30' src={logo} alt="" />
-                    <p className="font-bold">
-                        BookShelf
-                        <br />
-                        Providing reliable books since you have a interest to read
-                    </p>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-                </aside>
-                <nav>
-                    <div className="grid grid-flow-col gap-4">
-                        <a>
-                            <div className='text-2xl'><FaXTwitter /></div>
-                        </a>
-                        <a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
-                        </a>
-                        <a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                            </svg>
-                        </a>
+        <div className="mt-auto">
+            <footer className="bg-base-200 text-base-content pt-12 pb-6 border-t border-base-300">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                        {/* Company Info */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-4">
+                                <img className='h-12 w-12' src={logo} alt="BookShelf Logo" />
+                                <span className="font-bold text-xl text-base-content">BookShelf</span>
+                            </div>
+                            <p className="text-base-content/70 mb-4">Your personal library in the digital world</p>
+                            <div className="flex gap-4">
+                                <a href="#" className="text-lg text-base-content hover:text-primary transition-colors duration-200">
+                                    <FaFacebookF />
+                                </a>
+                                <a href="#" className="text-lg text-base-content hover:text-primary transition-colors duration-200">
+                                    <FaXTwitter />
+                                </a>
+                                <a href="#" className="text-lg text-base-content hover:text-primary transition-colors duration-200">
+                                    <FaInstagram />
+                                </a>
+                                <a href="#" className="text-lg text-base-content hover:text-primary transition-colors duration-200">
+                                    <FaLinkedinIn />
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Services */}
+                        <div>
+                            <span className="footer-title text-base-content font-bold text-lg mb-4 block">Services</span>
+                            <ul className="space-y-2">
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Book Discovery</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Reading Lists</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Reviews</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Community</a></li>
+                            </ul>
+                        </div>
+
+                        {/* Company */}
+                        <div>
+                            <span className="footer-title text-base-content font-bold text-lg mb-4 block">Company</span>
+                            <ul className="space-y-2">
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">About us</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Contact</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Jobs</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Press kit</a></li>
+                            </ul>
+                        </div>
+
+                        {/* Legal & Newsletter */}
+                        <div>
+                            <span className="footer-title text-base-content font-bold text-lg mb-4 block">Stay Connected</span>
+                            <ul className="space-y-2 mb-4">
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Terms of use</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Privacy policy</a></li>
+                                <li><a className="link link-hover text-base-content/70 hover:text-primary transition-colors duration-200">Cookie policy</a></li>
+                            </ul>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-base-content/70 text-sm">Subscribe to our newsletter</span>
+                                </label>
+                                <div className="flex gap-2">
+                                    <input
+                                        type="text"
+                                        placeholder="email@example.com"
+                                        className="input input-bordered input-sm bg-base-100 text-base-content border-base-300 flex-grow"
+                                    />
+                                    <button className="btn btn-primary btn-sm hover:bg-primary-focus transition-all duration-300 transform hover:scale-105">
+                                        Go
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </nav>
+
+                    <div className="border-t border-base-300 pt-6 mt-6 text-center">
+                        <p className="text-base-content/60">© {new Date().getFullYear()} BookShelf - All rights reserved</p>
+                    </div>
+                </div>
             </footer>
         </div>
     );

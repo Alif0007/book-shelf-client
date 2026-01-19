@@ -31,7 +31,7 @@ export default function App() {
                     >
                         <div className="hero-overlay z-0"></div>
                         <div className="hero-content text-neutral-content text-center">
-                            <div className="max-w-xl">
+                            <div className="max-w-xl text-white">
                                 <h1 className="mb-5 text-5xl font-bold animate__animated animate__tada">Welcome to Book Shelf</h1>
                                 <p className="mb-5 font-semibold">
                                     A Book Shelf breathes wisdom, whispers dreams, and awakens souls — every page a doorway, every book a universe waiting to unfold
@@ -50,7 +50,7 @@ export default function App() {
                         }}
                     >
                         <div className="hero-overlay z-0"></div>
-                        <div className="hero-content text-neutral-content text-center">
+                        <div className="hero-content text-neutral-content text-center text-white">
                             <div className="max-w-xl">
                                 <h1 className="mb-5 text-5xl font-bold">Explore the World of Words</h1>
                                 <p className="mb-5 font-semibold">
@@ -70,9 +70,9 @@ export default function App() {
                         }}
                     >
                         <div className="hero-overlay z-0"></div>
-                        <div className="hero-content text-neutral-content text-center">
+                        <div className="hero-content text-neutral-content text-center text-white">
                             <div className="max-w-xl">
-                                <h1 className="mb-5 text-5xl font-bold">Add a New Chapter</h1>
+                                <h1 className="mb-5 text-5xl font-bold ">Add a New Chapter</h1>
                                 <p className="mb-5 font-semibold">
                                     Share the joy of reading by adding a new book to our collection — every story you add inspires countless journeys ahead.
                                 </p>
